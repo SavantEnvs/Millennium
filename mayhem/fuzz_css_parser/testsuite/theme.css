@@ -1,0 +1,7 @@
+/* theme header */
+:root {
+    /** @name Accent @description Main accent colour */
+    --accent: #ff8800;
+    /** @name Panel @description Panel background */
+    --panel: rgba(10, 20, 30, 1);
+}

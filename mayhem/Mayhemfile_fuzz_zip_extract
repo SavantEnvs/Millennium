@@ -1,0 +1,11 @@
+project: savantenvs/Millennium
+target: fuzz_zip_extract
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_zip_extract/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_zip_extract
+    libfuzzer: true
+    timeout: 5

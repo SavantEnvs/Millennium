@@ -1,0 +1,11 @@
+project: savantenvs/Millennium
+target: fuzz_lua_rpc
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lua_rpc/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_lua_rpc
+    libfuzzer: true
+    timeout: 5

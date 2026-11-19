@@ -1,0 +1,11 @@
+project: savantenvs/Millennium
+target: fuzz_loopback_ipc
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_loopback_ipc/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_loopback_ipc
+    libfuzzer: true
+    timeout: 5

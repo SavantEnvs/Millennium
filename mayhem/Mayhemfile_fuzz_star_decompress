@@ -1,0 +1,11 @@
+project: savantenvs/Millennium
+target: fuzz_star_decompress
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_star_decompress/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_star_decompress
+    libfuzzer: true
+    timeout: 5
